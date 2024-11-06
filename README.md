@@ -21,8 +21,11 @@ Once your relay board is flashed with ESPHome:
 Edit the Thermostat.yaml file to include your OTA password and Home Assistant API encryption key, then flash using the ESPHome Web flasher or the ESPHome dashboard in Home Assistant. 
 
 #  Hardware Installation
+Local Temperature Sensor:
 Connect the DHT22 sensor to your relay board using jumper wires. 3.3V, ground, and GPIOs are broken out on the relay board's diagnostic header. 
+I've enabled the ESP32's internal pull-up in the configuration for the DHT22 input pin, but if you still find your DHT22 sensor works intermittently or stops returning data, you may need to add a 10K pull-up resistor between the sensor's VCC and Out pins. 
 
+Preserving Existing Thermostat:
 I've elected to keep the existing thermostat as a backup, so the output relays on the ESP32 board are wired as follows:
 
 Relay COM - Wire to air handler
