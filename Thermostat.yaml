@@ -23,7 +23,6 @@ ota:
 # values are appropriate for this board. 
 # Uncomment below to try Ethernet:
 #  type: JL1101
-#  type: LAN8720
 #  mdc_pin: GPIO23
 #  mdio_pin: GPIO18
 #  clk_mode: GPIO17_OUT
