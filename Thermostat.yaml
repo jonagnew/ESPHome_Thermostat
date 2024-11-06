@@ -94,7 +94,11 @@ binary_sensor:
 
 sensor:
   - platform: dht
-    pin: GPIO5
+    pin:
+      number: GPIO5
+      mode:
+        input: true
+        pullup: true
     model: DHT22
     temperature:
       name: "Local Temperature"
