@@ -14,6 +14,8 @@ DHT22 sensor:
 https://www.amazon.com/gp/aw/d/B0D93SY7G8
 
 #  Hardware Installation
+Connect the DHT22 sensor to your relay board using jumper wires. 3.3V, ground, and GPIOs are broken out on the relay board's diagnostic header. 
+
 I've elected to keep the existing thermostat as a backup, so the output relays on the ESP32 board are wired as follows:
 
 Relay COM - Wire to air handler
