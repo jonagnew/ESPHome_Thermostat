@@ -1,6 +1,6 @@
 # ESPHome_Thermostat
 
-Implementing a dual-setpoint HVAC thermostat on an inexpensive quad-relay ESP32 board using ESPHome. Inspired by janick's post on home-assistant.io: https://community.home-assistant.io/t/how-to-replacing-ecobee-smart-thermostat-with-esphome-climate-control/755102
+Implementing a dual-setpoint HVAC thermostat on an inexpensive quad-relay ESP32 board using ESPHome. Inspired by janick's post on home-assistant.io: https://community.home-assistant.io/t/how-to-replacing-ecobee-smart-thermostat-with-esphome-climate-control/755102 
 
 In this implementation, we're getting our default temperature reading from Home Assistant, and we've added a local DHT22 temperature/humidity sensor as a fallback when the Home Assistant server is unavailable. 
 
@@ -12,6 +12,13 @@ https://www.aliexpress.com/item/2255799905174014.html
 
 DHT22 sensor:
 https://www.amazon.com/gp/aw/d/B0D93SY7G8
+
+#  Software Installation
+This relay board ships with the manufacturer's default firmware, so you will first need to re-flash the board with ESPHome firmware using a USB-to-serial adapter. This is outside the scope of this document, being well-documented elsewhere. 
+IMPORTANT: Make sure you are using a 3.3v serial adapter! 5V logic levels can permanently damage or destroy the ESP32 microcontroller. 
+
+Once your relay board is flashed with ESPHome:
+Edit the Thermostat.yaml file to include your OTA password and Home Assistant API encryption key, then flash using the ESPHome Web flasher or the ESPHome dashboard in Home Assistant. 
 
 #  Hardware Installation
 Connect the DHT22 sensor to your relay board using jumper wires. 3.3V, ground, and GPIOs are broken out on the relay board's diagnostic header. 
