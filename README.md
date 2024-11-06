@@ -19,7 +19,9 @@ Connect the DHT22 sensor to your relay board using jumper wires. 3.3V, ground, a
 I've elected to keep the existing thermostat as a backup, so the output relays on the ESP32 board are wired as follows:
 
 Relay COM - Wire to air handler
+
 Relay NC  - Wire to existing thermostat
+
 Relay NO  - Jumpered 24 VAC "hot"
 
 In normal use, turn the existing thermostat OFF, and the ESP32 board will control the system. Otherwise, powering off the ESP32 board or activating BYPASS mode will connect the wall thermostat to the air handler. 
