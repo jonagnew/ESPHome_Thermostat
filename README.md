@@ -4,7 +4,7 @@ Implementing a dual-setpoint HVAC thermostat on an inexpensive quad-relay ESP32 
 
 In this implementation, we're getting our default temperature reading from Home Assistant, and we've added a local DHT22 temperature/humidity sensor as a fallback when the Home Assistant server is unavailable. 
 
-This version adds interlocking logic for the relay outputs to prevent undesired conditions, such as running heating/cooling simultaneously or without also running the fan. I've also added a BYPASS mode to pass control to the existing wall-mount thermostat, when wired correctly. 
+This version adds interlocking logic for the relay outputs to prevent undesired conditions, such as running heating/cooling simultaneously or without also running the fan. I've also added a BYPASS mode to pass control to the existing wall-mount thermostat, when wired correctly (see below.)
 
 #  Components
 The target board:
